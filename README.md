@@ -12,4 +12,7 @@
 4 install nodemon
 ```npm i nodemon -D```
 
-5
+5 create source src folder,
+inside src create app.js with info
+
+6 inside agenda make the info
