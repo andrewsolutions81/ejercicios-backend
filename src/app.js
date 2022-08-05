@@ -1,29 +1,14 @@
-const express = require('express')
+const http = require('http');
 
-const agenda = [
-  {
-    id: 1,
-    name: "Juan Pablo",
-    number: "123-456-789",
-  },
-  {
-    id: 2,
-    name: "Mauricio Arango",
-    number: "987-654-321",
-  },
-  {
-    id: 3,
-    name: "Andres Berrio",
-    number: "456-987-123",
-  }
-]
+const hostname = '127.0.0.1';
+const port = 3000;
 
-const app = express()
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+});
 
-app.use(express.json())
-
-app.get('/', (req, res) => {
-  res.send('<h1>Hola mundo TOP v23</h1>')
-})
-
-
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});

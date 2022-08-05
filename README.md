@@ -13,6 +13,6 @@
 ```npm i nodemon -D```
 
 5 create source src folder,
-inside src create app.js with info
+inside src create app.js
 
 6 inside agenda make the info
